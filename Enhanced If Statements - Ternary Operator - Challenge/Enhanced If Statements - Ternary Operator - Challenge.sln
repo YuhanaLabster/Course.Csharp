@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enhanced If Statements - Ternary Operator - Challenge", "Enhanced If Statements - Ternary Operator - Challenge.csproj", "{D1B2974B-BC8C-4AE9-B525-6AB263C24B7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1B2974B-BC8C-4AE9-B525-6AB263C24B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B2974B-BC8C-4AE9-B525-6AB263C24B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B2974B-BC8C-4AE9-B525-6AB263C24B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B2974B-BC8C-4AE9-B525-6AB263C24B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABA9B522-EF62-4868-88D6-49FF5A1A409B}
+	EndGlobalSection
+EndGlobal
