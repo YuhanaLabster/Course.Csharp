@@ -6,11 +6,11 @@ namespace excecise
     {
         static void Main(string[] args)
         {
-            callMe();
+            Callme();
         }
-        public void Callme();
+        static void Callme()
         {
-            Console.WriteLine("hello");
+            Console.WriteLine("Hello");
         }
     }
 }
