@@ -42,7 +42,17 @@ namespace _85._Foreach_Loops_and_Switch_Statement_challenge
                 }
             }
         }
-
+        public static void BoolChecker(string FirstValue)
+        {   
+            bool ParsedBool = false;
+            bool check = bool.TryParse(FirstValue, out ParsedBool);
+            if (ParsedBool)
+            {
+                IsRepeat = false;
+            }
+            Console.WriteLine($"{ParsedBool} is boolean");
+            IsRepeat = false;
+        }
         public static void CharChecker()
         {
             while (IsRepeat)
@@ -59,6 +69,9 @@ namespace _85._Foreach_Loops_and_Switch_Statement_challenge
                     break;
                     case 2:
                     IntChecker(FirstValue);
+                    break;
+                    case 3:
+                    BoolChecker(FirstValue);
                     break;
                     default :
                     Console.WriteLine("invalid options");
