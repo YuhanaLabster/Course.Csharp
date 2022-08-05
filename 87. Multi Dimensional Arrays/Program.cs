@@ -47,7 +47,13 @@ namespace _87._Multi_Dimensional_Arrays
             string [,] arrayTest =  new string[3, 2] { { "1","2"}, { "3","4"}, { "5","6"} };
 
             arrayTest[1, 1] = "replaced";
-            Console.WriteLine(arrayTest[0,1]);
+
+            //to know is this 2D,3D or whatever dimentions, we can use .rank method like below.
+            int check = array2D.Rank;
+            Console.WriteLine(check);
+            //
+
+            Console.WriteLine(arrayTest[1,1]);
         }
 
     }
