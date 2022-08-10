@@ -16,12 +16,13 @@ namespace _88._Nested_For_Loops_And_2D_Arrays
             {
                 Console.Write($"{x} this from foreach");
             }
+            Console.WriteLine('\n');
             for (int x = 0; x < matrix.GetLength(0); x++)
             {
                 for (int i = 0; i < matrix.GetLength(1); i++)
                 {
                     Console.WriteLine($"{matrix[x,i]} this from nested loop");
-                }
+                }  
             }   
 
         }
