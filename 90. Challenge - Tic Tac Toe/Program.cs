@@ -13,7 +13,7 @@ namespace _90._Challenge___Tic_Tac_Toe
 
         static void Main(string[] args)
         {
-            ShowAll();
+            UserInput();
         }
 
         static void ShowAll()
@@ -90,5 +90,34 @@ namespace _90._Challenge___Tic_Tac_Toe
 
             }
         }
+
+        static void UpdateScreen()
+        {
+            Console.Clear();
+        }
+
+        static int UserInput()
+        {
+            
+            return Player2Input();
+            return Player1Input();
+        }
+
+        static int Player1Input()
+        {
+            Console.WriteLine("Player 1 : Choose your field!");
+            string Player1 = Console.ReadLine();
+            int ParsedPLayer1Input = int.Parse(Player1);
+            return ParsedPLayer1Input;
+        }
+
+        static int Player2Input()
+        {
+            Console.WriteLine("Player 2 : Choose your field!");
+            string Player2 = Console.ReadLine();
+            int ParsedPLayer2Input = int.Parse(Player2);
+            return ParsedPLayer2Input;
+        }
+
     }
 }
