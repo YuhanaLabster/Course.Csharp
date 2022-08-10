@@ -13,7 +13,8 @@ namespace _90._Challenge___Tic_Tac_Toe
 
         static void Main(string[] args)
         {
-            UserInput();
+            //UserInput();
+            Player1Input();
         }
 
         static void ShowAll()
@@ -106,17 +107,41 @@ namespace _90._Challenge___Tic_Tac_Toe
         static int Player1Input()
         {
             Console.WriteLine("Player 1 : Choose your field!");
-            string Player1 = Console.ReadLine();
-            int ParsedPLayer1Input = int.Parse(Player1);
-            return ParsedPLayer1Input;
+            try
+            {
+            int Player1 = int.Parse(Console.ReadLine());
+            return Player1;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Please input the correct format");
+                return 0;
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Please only input single number only");
+                return 0;
+            }
         }
 
         static int Player2Input()
         {
             Console.WriteLine("Player 2 : Choose your field!");
-            string Player2 = Console.ReadLine();
-            int ParsedPLayer2Input = int.Parse(Player2);
-            return ParsedPLayer2Input;
+            try
+            {
+                int Player2 = int.Parse(Console.ReadLine());
+                return Player2;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Please input the correct format");
+                return 0;
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Please only input single number only");
+                return 0;
+            }
         }
 
     }
