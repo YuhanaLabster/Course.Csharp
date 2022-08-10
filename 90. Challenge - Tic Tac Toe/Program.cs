@@ -10,9 +10,12 @@ namespace _90._Challenge___Tic_Tac_Toe
                 { 4, 5, 6 },
                 { 7, 8, 9 },
         };
+        static bool isContinue = true;
+        static bool isReset = true;
 
         static void Main(string[] args)
         {
+
             //UserInput();
             Player1Input();
         }
