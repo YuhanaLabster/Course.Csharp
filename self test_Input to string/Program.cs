@@ -7,41 +7,112 @@ namespace self_test_Input_to_string
     {
         public static Dictionary<int, string> nominalCurrency = new Dictionary<int, string>();
         public static Dictionary<int, string> intToString = new Dictionary<int, string>();
+        public static List<string> Combined = new List<string>();
+        public static List<string> Collection = new List<string>();
+        public static List<int> stringToInt = new List<int>();
+
+        public static int [] separated = new int [0];
         static void Main(string[] args)
         {
-            Console.WriteLine($"{nominalCurrency[1]}");
+            addValue();
             Console.WriteLine("input number");
             string input = Console.ReadLine();
-            long parsed = long.Parse(input);
             int inputLength = input.Length;
+            AddToList(input);
+            LengthMaching(inputLength);
+            CombiningResult();
+        }
+
+        static void AddToList (string input)
+        {
+            foreach (char item in input)
+            {
+                string charToString = item.ToString();
+                int charToInt = Convert.ToInt32(charToString);
+                stringToInt.Add(charToInt);
             }
-        static void Process(int inputLength)
+        }
+
+        static void InputBreakerNominalCurrency()
+        {
+            foreach (KeyValuePair<int, string> entry in nominalCurrency)
+            {
+                foreach (int item in stringToInt)
+                {
+                    if (item == entry.Key)
+                    {
+                        Combined.Add(entry.Value);
+                        Console.WriteLine($"InputBreakerNominalCurrency {entry.Value}");
+                    }
+                }
+            }
+        }
+
+        static void InputBreakerIntToString()
+        {
+            foreach (KeyValuePair<int, string> entry in intToString)
+            {
+                foreach (int item in stringToInt)
+                {
+                    if (item == entry.Key)
+                    {
+                        Combined.Add(entry.Value);
+                    }
+                }
+            }
+        }
+
+        static void CombiningResult()
+        {
+            InputBreakerNominalCurrency();
+            InputBreakerIntToString();
+            foreach (string item in Combined)
+            {
+                Console.WriteLine($"CombiningResult() {item}");
+            }
+        }
+
+        static void LengthMaching(int inputLength)
             {
             switch (inputLength)
                 {
+                    case 2:
+                    CombiningResult();
+                    break;
                     case 3:
-                        break;
+                    CombiningResult();
+                    break;
                     case 4:
-                        break;
+                    CombiningResult();
+                    break;
                     case 5:
-                        break;
+                    CombiningResult();
+                    break;
                     case 6:
-                        break;
+                    CombiningResult();
+                    break;
                     case 7:
-                        break;
+                    CombiningResult();
+                    break;
                     case 8:
-                        break;
+                    CombiningResult();
+                    break;
                     case 9:
-                        break;
+                    CombiningResult();
+                    break;
                     case 10:
-                        break;
+                    CombiningResult();
+                    break;
                     case 11:
-                        break;
+                    CombiningResult();
+                    break;
                     case 12:
-                        break;
+                    break;
                     case 13:
-                        break;
+                    CombiningResult();
+                    break;
                     default:
+                    Console.WriteLine("Maximum 13 digits");
                         break;
                 }
             }
@@ -69,6 +140,7 @@ namespace self_test_Input_to_string
             intToString.Add(8, "delapan");
             intToString.Add(9, "sembilan");
             intToString.Add(10, "sepuluh");
+            intToString.Add(11, "rupiah");
         }
     }
 }
