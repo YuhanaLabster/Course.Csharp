@@ -12,11 +12,20 @@ namespace _90._Challenge___Tic_Tac_Toe
         {
             for (int i = 1; i < 3; i++)
             {
-            Console.WriteLine($"Hi Player {i} ,Do you have preffered character?\n Please input single character only");
-            string CharacterInput = Console.ReadLine();
-                Variables.PlayerCharacters.Add(CharacterInput);
+                Console.WriteLine($"Hi Player {i}\nDo you have preffered character?\nPlease input single character only");
+                Variables.Player.Add(i,Console.ReadLine());
+                Display.RefreshScreen();
             }
+            Console.WriteLine("Please remember your character");
+            foreach (var i in Variables.Player)
+            {
+                Console.WriteLine($"Player {i.Key} : {i.Value}");
+            }
+            Console.WriteLine("Press ENTER to START!");
+            Console.ReadKey();
+
         }
+
         public static int PlayerInput(int PlayerId)
         {
             Console.WriteLine($"Player {PlayerId} : Choose your field!");
@@ -68,6 +77,9 @@ namespace _90._Challenge___Tic_Tac_Toe
             }
         }
 
-
+        public static void ClearData()
+        {
+            Variables.Player.Clear();
+        }
     }
 }
