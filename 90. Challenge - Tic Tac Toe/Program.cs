@@ -7,7 +7,12 @@ namespace _90._Challenge___Tic_Tac_Toe
     {
         static void Main(string[] args)
         {
-            Display.Screen();
+            //Display.Screen();
+            Input.AskUserCharacter();
+            foreach (var character in Variables.PlayerCharacters)
+            {
+                Console.Write(character);
+            }
         }
     }
 }

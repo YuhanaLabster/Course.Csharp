@@ -8,9 +8,10 @@ namespace _90._Challenge___Tic_Tac_Toe
 {
     internal class GameLogic
     {
-        public bool isContinue
+        public static bool isContinue
         {
             get { return true; }
+            set { isContinue = value; }
         }
 
         public bool RestartGame
@@ -23,9 +24,12 @@ namespace _90._Challenge___Tic_Tac_Toe
             
         }
 
-        public static void PlayerSwitch(int PlayerId)
+        public static void PlayerSwitch()
         {
-          
+            for (int i = 1; i < 3; i++) 
+                {
+                    Input.PlayerInput(i);
+                }
         }
     }
 

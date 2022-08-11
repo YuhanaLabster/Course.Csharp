@@ -8,11 +8,14 @@ namespace _90._Challenge___Tic_Tac_Toe
 {
     internal class Input
     {
-        public static string AskUserCharacter(int PlayerId)
+        public static void AskUserCharacter()
         {
-            Console.WriteLine("Do you have preffered character?\n Please input single character only");
-            string Player1Character = Console.ReadLine();
-            return Player1Character;
+            for (int i = 1; i < 3; i++)
+            {
+            Console.WriteLine($"Hi Player {i} ,Do you have preffered character?\n Please input single character only");
+            string CharacterInput = Console.ReadLine();
+                Variables.PlayerCharacters.Add(CharacterInput);
+            }
         }
         public static int PlayerInput(int PlayerId)
         {
@@ -34,9 +37,9 @@ namespace _90._Challenge___Tic_Tac_Toe
             }
         }
 
-        public static void Switcher(int PlayerId)
+        public static void Switcher(int PlayerInput)
         {
-            switch (PlayerId)
+            switch (PlayerInput)
             {
                 case 1:
                     Variables.Board[1, 0] = "need to be changed";
