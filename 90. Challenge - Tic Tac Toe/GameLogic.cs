@@ -27,6 +27,7 @@ namespace _90._Challenge___Tic_Tac_Toe
             {
                 for (int i = 1; i < 3; i++) 
                     {
+                        Input.CharacterReminder();
                         Display.DrawScreen();
                         Input.ArrayUpdater(Input.PlayerInput(i), Variables.Player[i]);
                         Display.RefreshScreen();

@@ -16,6 +16,10 @@ namespace _90._Challenge___Tic_Tac_Toe
                 Variables.Player.Add(i,Console.ReadLine());
                 Display.RefreshScreen();
             }
+        }
+
+        public static void CharacterReminder()
+        {
             Console.WriteLine("Please remember your character");
             foreach (var i in Variables.Player)
             {
@@ -55,7 +59,6 @@ namespace _90._Challenge___Tic_Tac_Toe
             {
                 case 1:
                     Variables.Board[0, 0] = userCharacter;
-                    Console.WriteLine($"case output {userCharacter}");
                     break;
                 case 2:
                     Variables.Board[0, 1] = userCharacter;
