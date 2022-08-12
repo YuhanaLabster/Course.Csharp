@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,16 +36,30 @@ namespace _90._Challenge___Tic_Tac_Toe
             }
         }
 
-        public static void OverideChecker()
+        public static void OverideChecker(int PlayerId)
         {
-            for (int i = 0; i < Variables.Board.Length; i++)
+            PlayerInverter(PlayerId);
+        }
+
+        public static int PlayerInverter(int PlayerId)
+        {
+            if (PlayerId %2== 0)
             {
-                for (int j = 0; i < Variables.Board.Length; j++)
-                {
-                    //ensure each player can not overide each value
-                }
+                return 1;
+            }
+            return 2;
+        }
+
+        public static void QuitGame()
+        {
+            Display.RefreshScreen();
+            Console.WriteLine("do you want to quit?");
+            if (Console.ReadLine() == "y")
+            {
+                isContinue = false;
             }
         }
+
     }
 
 }
