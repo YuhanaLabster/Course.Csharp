@@ -26,9 +26,9 @@ namespace _90._Challenge___Tic_Tac_Toe
 
         }
 
-        public static int PlayerInput(int PlayerId)
+        public static int PlayerInput(int PlayerKey)
         {
-            Console.WriteLine($"Player {PlayerId} : Choose your field!");
+            Console.WriteLine($"Player {PlayerKey} : Choose your field!");
             try
             {
                 int userInput = int.Parse(Console.ReadLine());
@@ -46,28 +46,36 @@ namespace _90._Challenge___Tic_Tac_Toe
             }
         }
 
-        public static void Switcher(int PlayerInput)
+        public static void ArrayUpdater(int PlayerInput, string userCharacter)
         {
             switch (PlayerInput)
             {
                 case 1:
-                    Variables.Board[1, 0] = "need to be changed";
+                    Variables.Board[0, 0] = userCharacter;
                     break;
                 case 2:
+                    Variables.Board[0, 1] = userCharacter;
                     break;
                 case 3:
+                    Variables.Board[0, 2] = userCharacter;
                     break;
                 case 4:
+                    Variables.Board[1, 0] = userCharacter;
                     break;
                 case 5:
+                    Variables.Board[1, 1] = userCharacter;
                     break;
                 case 6:
+                    Variables.Board[1, 2] = userCharacter;
                     break;
                 case 7:
+                    Variables.Board[2, 0] = userCharacter;
                     break;
                 case 8:
+                    Variables.Board[2, 1] = userCharacter;
                     break;
                 case 9:
+                    Variables.Board[2, 2] = userCharacter;
                     break;
                 default:
                     {

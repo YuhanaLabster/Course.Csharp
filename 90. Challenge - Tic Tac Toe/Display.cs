@@ -13,7 +13,7 @@ namespace _90._Challenge___Tic_Tac_Toe
             Console.Clear();
         }
 
-        public static void Screen()
+        public static void DrawScreen()
         {
             FirstRow();
             Console.Write("\n_______|_______|______\n");
@@ -21,7 +21,6 @@ namespace _90._Challenge___Tic_Tac_Toe
             Console.Write("\n_______|_______|______\n");
             ThirdRow();
             Console.Write("\n       |       |       \n");
-            Console.ReadKey();
         }
 
         static void FirstRow()

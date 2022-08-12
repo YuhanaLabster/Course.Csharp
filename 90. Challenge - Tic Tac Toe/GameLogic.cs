@@ -19,17 +19,17 @@ namespace _90._Challenge___Tic_Tac_Toe
             get { return false; }
         }
 
-        public static void Updater(string userCharacter, int userInput)
+        public static void Gameplay()
         {
-            
-        }
-
-        public static void PlayerSwitch()
-        {
-            for (int i = 1; i < 3; i++) 
+            Input.AskUserCharacter();
+            Display.DrawScreen();
+            while (isContinue)
+            {
+            for (int i = 0; i < 3; i++) 
                 {
-                    Input.PlayerInput(i);
+                    Input.ArrayUpdater(Variables.Player.ElementAt(i).Key, Variables.Player.ElementAt(i).Value);
                 }
+            }
         }
     }
 

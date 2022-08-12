@@ -8,10 +8,13 @@ namespace _90._Challenge___Tic_Tac_Toe
         static void Main(string[] args)
         {
             //Display.Screen();
-            while (true)
+            //NewGame();
+            GameLogic.Gameplay();
+        static void NewGame()
             {
                 Input.AskUserCharacter();
                 Input.ClearData();
+                Display.RefreshScreen();
             }
         }
     }
