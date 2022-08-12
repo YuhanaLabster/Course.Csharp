@@ -15,6 +15,5 @@ namespace _90._Challenge___Tic_Tac_Toe
                 { "7", "8", "9" },//[2, 0], [2, 1],[2, 2]
         };
         public static Dictionary<int, string> Player = new Dictionary<int, string>();
-
     }
 }
