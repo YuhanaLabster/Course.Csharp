@@ -59,30 +59,39 @@ namespace _90._Challenge___Tic_Tac_Toe
             {
                 case 1:
                     Variables.Board[0, 0] = userCharacter;
+                    GameLogic.OverideChecker();
                     break;
                 case 2:
                     Variables.Board[0, 1] = userCharacter;
+                    GameLogic.OverideChecker();
                     break;
                 case 3:
                     Variables.Board[0, 2] = userCharacter;
+                    GameLogic.OverideChecker();
                     break;
                 case 4:
                     Variables.Board[1, 0] = userCharacter;
+                    GameLogic.OverideChecker();
                     break;
                 case 5:
                     Variables.Board[1, 1] = userCharacter;
+                    GameLogic.OverideChecker();
                     break;
                 case 6:
                     Variables.Board[1, 2] = userCharacter;
+                    GameLogic.OverideChecker();
                     break;
                 case 7:
                     Variables.Board[2, 0] = userCharacter;
+                    GameLogic.OverideChecker();
                     break;
                 case 8:
                     Variables.Board[2, 1] = userCharacter;
+                    GameLogic.OverideChecker();
                     break;
                 case 9:
                     Variables.Board[2, 2] = userCharacter;
+                    GameLogic.OverideChecker();
                     break;
                 default:
                     {
