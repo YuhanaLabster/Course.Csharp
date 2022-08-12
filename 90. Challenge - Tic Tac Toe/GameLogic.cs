@@ -21,14 +21,16 @@ namespace _90._Challenge___Tic_Tac_Toe
 
         public static void Gameplay()
         {
+            Display.RefreshScreen();
             Input.AskUserCharacter();
-            Display.DrawScreen();
             while (isContinue)
             {
-            for (int i = 0; i < 3; i++) 
-                {
-                    Input.ArrayUpdater(Variables.Player.ElementAt(i).Key, Variables.Player.ElementAt(i).Value);
-                }
+                for (int i = 1; i < 3; i++) 
+                    {
+                        Display.DrawScreen();
+                        Input.ArrayUpdater(Input.PlayerInput(i), Variables.Player[i]);
+                        Display.RefreshScreen();
+                    }
             }
         }
     }

@@ -21,9 +21,6 @@ namespace _90._Challenge___Tic_Tac_Toe
             {
                 Console.WriteLine($"Player {i.Key} : {i.Value}");
             }
-            Console.WriteLine("Press ENTER to START!");
-            Console.ReadKey();
-
         }
 
         public static int PlayerInput(int PlayerKey)
@@ -32,6 +29,7 @@ namespace _90._Challenge___Tic_Tac_Toe
             try
             {
                 int userInput = int.Parse(Console.ReadLine());
+                Console.WriteLine($"user entered {userInput}");
                 return userInput;
             }
             catch (FormatException)
@@ -44,14 +42,20 @@ namespace _90._Challenge___Tic_Tac_Toe
                 Console.WriteLine("Please only input single number only");
                 return 0;
             }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine($"Player {PlayerKey} you just did not input any number,your move skipped");
+                return 0;
+            }
         }
 
         public static void ArrayUpdater(int PlayerInput, string userCharacter)
-        {
+        {     
             switch (PlayerInput)
             {
                 case 1:
                     Variables.Board[0, 0] = userCharacter;
+                    Console.WriteLine($"case output {userCharacter}");
                     break;
                 case 2:
                     Variables.Board[0, 1] = userCharacter;
