@@ -34,6 +34,17 @@ namespace _90._Challenge___Tic_Tac_Toe
                     }
             }
         }
+
+        public static void OverideChecker()
+        {
+            for (int i = 0; i < Variables.Board.Length; i++)
+            {
+                for (int j = 0; i < Variables.Board.Length; j++)
+                {
+                    //ensure each player can not overide each value
+                }
+            }
+        }
     }
 
 }
