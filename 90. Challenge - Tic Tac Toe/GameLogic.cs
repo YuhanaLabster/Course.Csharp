@@ -51,14 +51,19 @@ namespace _90._Challenge___Tic_Tac_Toe
             return 2;
         }
 
-        public static void QuitGame()
+        public static void GameConfirmation()
         {
             Display.RefreshScreen();
-            Console.WriteLine("do you want to quit?");
-            if (Console.ReadLine() == "y")
+            if (Input.PlayerConfirmation() == 1)
             {
-                isContinue = false;
+                Gameplay();
             }
+        }
+
+        public static void Winner(int PlayerKey)
+        {
+            Console.WriteLine($"Congratulations Player {PlayerKey}, you are the winner!");
+            GameConfirmation();
         }
 
         public static void LineChecker(int PlayerKey)
@@ -77,6 +82,7 @@ namespace _90._Challenge___Tic_Tac_Toe
             if (Variables.Player[PlayerKey].Equals(Variables.Board[0, 0]) && Variables.Player[PlayerKey].Equals(Variables.Board[0, 1]) && Variables.Player[PlayerKey].Equals(Variables.Board[0, 2]))
             {
                 Debug.WriteLine($"Player {PlayerKey} is the winner!");
+                Winner(PlayerKey);
             }
         }
         public static void SecondRow(int PlayerKey)
@@ -85,6 +91,7 @@ namespace _90._Challenge___Tic_Tac_Toe
             if (Variables.Player[PlayerKey].Equals(Variables.Board[1, 0]) && Variables.Player[PlayerKey].Equals(Variables.Board[1, 1]) && Variables.Player[PlayerKey].Equals(Variables.Board[1, 2]))
             {
                 Debug.WriteLine($"Player {PlayerKey} is the winner!");
+                Winner(PlayerKey);
             }
         }
         public static void ThirdRow(int PlayerKey)
@@ -93,6 +100,7 @@ namespace _90._Challenge___Tic_Tac_Toe
             if (Variables.Player[PlayerKey].Equals(Variables.Board[2, 0]) && Variables.Player[PlayerKey].Equals(Variables.Board[2, 1]) && Variables.Player[PlayerKey].Equals(Variables.Board[2, 2]))
             {
                 Debug.WriteLine($"Player {PlayerKey} is the winner!");
+                Winner(PlayerKey);
             }
         }
         public static void FirstColumn(int PlayerKey)
@@ -101,6 +109,7 @@ namespace _90._Challenge___Tic_Tac_Toe
             if (Variables.Player[PlayerKey].Equals(Variables.Board[0, 0]) && Variables.Player[PlayerKey].Equals(Variables.Board[1, 0]) && Variables.Player[PlayerKey].Equals(Variables.Board[2, 0]))
             {
                 Debug.WriteLine($"Player {PlayerKey} is the winner!");
+                Winner(PlayerKey);
             }
         }
         public static void SecondColumn(int PlayerKey)
@@ -109,6 +118,7 @@ namespace _90._Challenge___Tic_Tac_Toe
             if (Variables.Player[PlayerKey].Equals(Variables.Board[0, 1]) && Variables.Player[PlayerKey].Equals(Variables.Board[1, 1]) && Variables.Player[PlayerKey].Equals(Variables.Board[2, 1]))
             {
                 Debug.WriteLine($"Player {PlayerKey} is the winner!");
+                Winner(PlayerKey);
             }
         }
         public static void ThirdColumn(int PlayerKey)
@@ -117,6 +127,7 @@ namespace _90._Challenge___Tic_Tac_Toe
             if (Variables.Player[PlayerKey].Equals(Variables.Board[0, 2]) && Variables.Player[PlayerKey].Equals(Variables.Board[1, 2]) && Variables.Player[PlayerKey].Equals(Variables.Board[2, 2]))
             {
                 Debug.WriteLine($"Player {PlayerKey} is the winner!");
+                Winner(PlayerKey);
             }
         }
         public static void Diagonal(int PlayerKey)
@@ -125,6 +136,7 @@ namespace _90._Challenge___Tic_Tac_Toe
             if (Variables.Player[PlayerKey].Equals(Variables.Board[0, 0]) && Variables.Player[PlayerKey].Equals(Variables.Board[1, 1]) && Variables.Player[PlayerKey].Equals(Variables.Board[2, 2]))
             {
                 Debug.WriteLine($"Player {PlayerKey} is the winner!");
+                Winner(PlayerKey);
             }
         }
 
