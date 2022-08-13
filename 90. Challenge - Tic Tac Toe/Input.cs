@@ -54,6 +54,32 @@ namespace _90._Challenge___Tic_Tac_Toe
             }
         }
 
+        public static int PlayerConfirmation()
+        {
+            try
+            {
+                int userInput = int.Parse(Console.ReadLine());
+                Console.WriteLine("Press 1 to restart or 2 to exit the game");
+                return userInput;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Please input the correct format");
+                return 0;
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Please only input single number only");
+                return 0;
+            }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine($"please check your input");
+                PlayerConfirmation();
+                return 0;
+            }
+        }
+
         public static void ArrayUpdater(int PlayerInput, string userCharacter)
         {     
             switch (PlayerInput)
@@ -95,7 +121,7 @@ namespace _90._Challenge___Tic_Tac_Toe
 
                     break;
                 case 0:
-                    GameLogic.QuitGame();
+                    GameLogic.GameConfirmation();
                     break;
 
             }
