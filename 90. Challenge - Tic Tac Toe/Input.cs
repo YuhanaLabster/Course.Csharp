@@ -25,7 +25,6 @@ namespace _90._Challenge___Tic_Tac_Toe
             {
                 Console.WriteLine($"Player {i.Key} : {i.Value}");
             }
-            Console.WriteLine("quit game? press 0 (zero)");
         }
 
         public static int PlayerInput(int PlayerKey)
