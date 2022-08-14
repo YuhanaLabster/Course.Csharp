@@ -30,7 +30,9 @@ namespace _90._Challenge___Tic_Tac_Toe
                         LineChecker(i);
                         Display.RefreshScreen();
                     }
+
             }
+
         }
 
         public static void OverideChecker(int PlayerId)
@@ -49,7 +51,6 @@ namespace _90._Challenge___Tic_Tac_Toe
 
         public static void GameConfirmation()
         {
-            Display.RefreshScreen();
             if (Input.PlayerConfirmation() == 1)
             {
                 Input.ClearData();
