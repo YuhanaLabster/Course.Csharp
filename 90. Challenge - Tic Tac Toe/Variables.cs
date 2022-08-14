@@ -14,6 +14,7 @@ namespace _90._Challenge___Tic_Tac_Toe
                 { "4", "5", "6" },//[1, 0], [1, 1],[1, 2]
                 { "7", "8", "9" },//[2, 0], [2, 1],[2, 2]
         };
+        public static string [,] Cloned = (string[,]) Board.Clone();
         public static Dictionary<int, string> Player = new Dictionary<int, string>();
     }
 }

@@ -55,10 +55,10 @@ namespace _90._Challenge___Tic_Tac_Toe
 
         public static int PlayerConfirmation()
         {
+            Console.WriteLine("Press 1 to restart or 2 to exit the game");
             try
             {
                 int userInput = int.Parse(Console.ReadLine());
-                Console.WriteLine("Press 1 to restart or 2 to exit the game");
                 return userInput;
             }
             catch (FormatException)
@@ -129,6 +129,18 @@ namespace _90._Challenge___Tic_Tac_Toe
         public static void ClearData()
         {
             Variables.Player.Clear();
+            CloneArray();
+        }
+
+        public static void CloneArray()
+        {
+            for (int i = 0; i < Variables.Cloned.GetLength(0); i++)
+            {
+                for (int j = 0; j < Variables.Cloned.GetLength(1); j++)
+                {
+                    Variables.Board[i,j] = Variables.Cloned[i,j];
+                }
+            }
         }
     }
 }
