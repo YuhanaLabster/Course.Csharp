@@ -11,11 +11,6 @@ namespace _90._Challenge___Tic_Tac_Toe
     {
         public static bool isContinue = true;
 
-        public bool RestartGame
-        {
-            get { return false; }
-        }
-
         public static void Gameplay()
         {
             Display.RefreshScreen();
@@ -33,20 +28,6 @@ namespace _90._Challenge___Tic_Tac_Toe
 
             }
 
-        }
-
-        public static void OverideChecker(int PlayerId)
-        {
-            PlayerInverter(PlayerId);
-        }
-
-        public static int PlayerInverter(int PlayerId)
-        {
-            if (PlayerId %2== 0)
-            {
-                return 1;
-            }
-            return 2;
         }
 
         public static void GameConfirmation()
@@ -81,6 +62,7 @@ namespace _90._Challenge___Tic_Tac_Toe
             ThirdColumn(PlayerKey);
             Diagonal(PlayerKey);
         }
+
         public static void FirstRow(int PlayerKey)
         {
             //[0, 0], [0, 1],[0, 2]
@@ -89,6 +71,7 @@ namespace _90._Challenge___Tic_Tac_Toe
                 Winner(PlayerKey);
             }
         }
+
         public static void SecondRow(int PlayerKey)
         {
             //[1, 0], [1, 1],[1, 2]
@@ -97,6 +80,7 @@ namespace _90._Challenge___Tic_Tac_Toe
                 Winner(PlayerKey);
             }
         }
+
         public static void ThirdRow(int PlayerKey)
         {
             //[2, 0], [2, 1],[2, 2]
@@ -105,6 +89,7 @@ namespace _90._Challenge___Tic_Tac_Toe
                 Winner(PlayerKey);
             }
         }
+
         public static void FirstColumn(int PlayerKey)
         {
             //[0, 0], [1, 0],[2, 0]
@@ -113,6 +98,7 @@ namespace _90._Challenge___Tic_Tac_Toe
                 Winner(PlayerKey);
             }
         }
+
         public static void SecondColumn(int PlayerKey)
         {
             //[0, 1], [1, 1],[2, 1]
@@ -122,6 +108,7 @@ namespace _90._Challenge___Tic_Tac_Toe
                 Winner(PlayerKey);
             }
         }
+
         public static void ThirdColumn(int PlayerKey)
         {
             //[0, 2], [1, 2],[2, 2]
@@ -131,6 +118,7 @@ namespace _90._Challenge___Tic_Tac_Toe
                 Winner(PlayerKey);
             }
         }
+
         public static void Diagonal(int PlayerKey)
         {
             //[0, 0], [1, 1],[2, 2]
@@ -140,7 +128,6 @@ namespace _90._Challenge___Tic_Tac_Toe
                 Winner(PlayerKey);
             }
         }
-
 
     }
 
