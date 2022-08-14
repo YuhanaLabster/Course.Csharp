@@ -36,10 +36,15 @@ namespace _90._Challenge___Tic_Tac_Toe
             {
                 case 1:
                 Input.ClearData();
-                Gameplay();
+                    isContinue = true;
+                    Gameplay();
+
                     break;
                 case 2:
-                Console.WriteLine("bye");
+                isContinue = false;
+                    Display.RefreshScreen();
+                    Console.WriteLine("BYE!");
+                    Environment.Exit(0);
                     break;
             }
         }
