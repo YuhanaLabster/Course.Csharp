@@ -51,14 +51,15 @@ namespace _90._Challenge___Tic_Tac_Toe
 
         public static void GameConfirmation()
         {
-            if (Input.PlayerConfirmation() == 1)
+            switch (Input.PlayerConfirmation())
             {
+                case 1:
                 Input.ClearData();
                 Gameplay();
-            }
-            else
-            {
+                    break;
+                case 2:
                 Console.WriteLine("bye");
+                    break;
             }
         }
 
