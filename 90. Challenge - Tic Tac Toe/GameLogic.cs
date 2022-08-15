@@ -22,6 +22,7 @@ namespace _90._Challenge___Tic_Tac_Toe
                         Input.CharacterReminder();
                         Display.DrawScreen();
                         Input.ArrayUpdater(Input.PlayerInput(i), Variables.Player[i]);
+                    Input.DuplicateFinder(i);
                         LineChecker(i);
                         Display.RefreshScreen();
                     }
@@ -65,7 +66,8 @@ namespace _90._Challenge___Tic_Tac_Toe
             FirstColumn(PlayerKey);
             SecondColumn(PlayerKey);
             ThirdColumn(PlayerKey);
-            Diagonal(PlayerKey);
+            FirstDiagonal(PlayerKey);
+            SecondDiagonal(PlayerKey);
         }
 
         public static void FirstRow(int PlayerKey)
@@ -124,12 +126,22 @@ namespace _90._Challenge___Tic_Tac_Toe
             }
         }
 
-        public static void Diagonal(int PlayerKey)
+        public static void FirstDiagonal(int PlayerKey)
         {
             //[0, 0], [1, 1],[2, 2]
             if (Variables.Player[PlayerKey].Equals(Variables.Board[0, 0]) && Variables.Player[PlayerKey].Equals(Variables.Board[1, 1]) && Variables.Player[PlayerKey].Equals(Variables.Board[2, 2]))
             {
                 
+                Winner(PlayerKey);
+            }
+        }
+
+        public static void SecondDiagonal(int PlayerKey)
+        {
+            //[2, 0], [1, 1],[0, 2]
+            if (Variables.Player[PlayerKey].Equals(Variables.Board[2, 0]) && Variables.Player[PlayerKey].Equals(Variables.Board[1, 1]) && Variables.Player[PlayerKey].Equals(Variables.Board[0, 2]))
+            {
+
                 Winner(PlayerKey);
             }
         }
