@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,6 +51,21 @@ namespace _90._Challenge___Tic_Tac_Toe
             {
                 Console.WriteLine($"Player {PlayerKey} you just did not input any number,your move skipped");
                 return 0;
+            }
+        }
+
+        public static void DuplicateFinder(int PlayerKey)
+        {
+            string PlayerCharacter = Variables.Player[PlayerKey]; 
+            for (int i = 0; i < Variables.Board.GetLength(0); i++)
+            {
+                for (int j = 0; j < Variables.Board.GetLength(1); j++)
+                {
+                    if (Variables.Board[i, j] != PlayerCharacter)
+                    {
+                        Debug.WriteLine("duplicate found");
+                    }
+                }   
             }
         }
 
