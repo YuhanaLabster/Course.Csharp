@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_96._Getting_The_Min_Value_Of_Many_Given_Numbers_Using_Params</RootNamespace>
+  </PropertyGroup>
+
+</Project>
