@@ -44,7 +44,7 @@ namespace _106._Queues
                 * We need to create list of Order[] ReceiveOrderFromBranch1() and Order[] ReceiveOrderFromBranch2()
                 * We need to create Queue<Order> ordersQueue = new Queue<Order>() as the data container for both branches.
                 * We need to create function to add all values into ordersQueue called AddOrderFromBranches()
-                * We need to create function to sort and parse the value into the ProcessOrder() so it can be added into the process
+                * We need to create function AddValuesToordersQueue() to sort and parse the value into the ProcessOrder() so it can be added into the process
              * 
              */
             AddOrderFromBranches();
@@ -98,6 +98,7 @@ namespace _106._Queues
                 ordersQueue.Enqueue(ORDR);
             }
         }
+
         public static void AddValuesToordersQueue()
         {
             while(ordersQueue.Count > 0)
