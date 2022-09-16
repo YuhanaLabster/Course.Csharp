@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_120._Inheritance_Challenge_2___Employees__Bosses_and_Trainees_Solution</RootNamespace>
+  </PropertyGroup>
+
+</Project>
