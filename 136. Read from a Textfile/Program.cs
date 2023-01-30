@@ -12,7 +12,7 @@ namespace _136._Read_from_a_Textfile
             string output = "D:\\C#\\Learnerbly\\136. Read from a Textfile\\files\\output.txt";
             string location = "D:\\C#\\Learnerbly\\136. Read from a Textfile\\files\\";
 
-            Assignment(input, output);
+            CustomNotepadUsingStreamWritter(location);
         }
 
         static string ReadFromFile(string location) // read file directly using ReadAllText
@@ -76,15 +76,14 @@ namespace _136._Read_from_a_Textfile
             bool isContinue = true;
             Console.WriteLine($"write your message, and it will be stored in {location} \n Now write the file name");
             string fileName = Console.ReadLine();
+            Console.WriteLine("now write the message");
+            using (StreamWriter sw = new StreamWriter($"{location}{fileName}.txt"))
             while(isContinue)
             {
-                Console.WriteLine("now write the message");
-                using (StreamWriter sw = new StreamWriter($"{location}{fileName}.txt"))
                 {
                     sw.WriteLine(UserInput(),true);
                     if (AskConfirmation(UserInput()))
                     {
-                        sw.WriteLine(UserInput(),true);
                         isContinue = false;
                     }
                 }
@@ -93,7 +92,7 @@ namespace _136._Read_from_a_Textfile
 
         static bool AskConfirmation(string input)
         {
-            Console.WriteLine("continue? (Y/N)");
+            Console.WriteLine("Quit? (Y/N)");
             if (input == "Y")
             {
                 return false;
