@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_160._A_hint_for_the_next_exercise__Lambda_as_variable_</RootNamespace>
+  </PropertyGroup>
+
+</Project>
