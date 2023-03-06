@@ -16,7 +16,7 @@ namespace _195._Linq_Demo
         {
             // find the odd numbers then print it out
             Console.WriteLine("Odd Numbers : ");
-            IEnumerable<int> oddNumbers = from number in numbers where number % 2 ==0 select number;
+            IEnumerable<int> oddNumbers = from number in numbers where number % 2 !=0 select number;
             Console.WriteLine(oddNumbers);
             foreach (int item in oddNumbers)
             {
