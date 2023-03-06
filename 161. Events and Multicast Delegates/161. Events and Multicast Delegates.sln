@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "161. Events and Multicast Delegates", "161. Events and Multicast Delegates.csproj", "{673E869B-C6BE-45F8-AE3E-12C66AD27504}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{673E869B-C6BE-45F8-AE3E-12C66AD27504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{673E869B-C6BE-45F8-AE3E-12C66AD27504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{673E869B-C6BE-45F8-AE3E-12C66AD27504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{673E869B-C6BE-45F8-AE3E-12C66AD27504}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C0A81CD-A1C8-4B33-9141-C0429A3DB341}
+	EndGlobalSection
+EndGlobal
