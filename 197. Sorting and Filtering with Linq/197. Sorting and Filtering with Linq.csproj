@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_197._Sorting_and_Filtering_with_Linq</RootNamespace>
+  </PropertyGroup>
+
+</Project>
